@@ -5,7 +5,7 @@ import numpy
 setup(
 	name='pyjpegls',
 	version='0.0.1',
-	description='Encode and decode jpeg-ls files to and from numpy arrays.',
+	description='Encode and decode jpeg-ls files from and to numpy arrays.',
 	install_requires = [
 		'numpy'
 	],
