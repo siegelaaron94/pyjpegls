@@ -1,2 +1,2 @@
 # pyjpegls
-Encode and decode jpeg-ls files to and from numpy arrays.
+Encode and decode jpeg-ls files from and to numpy arrays.
