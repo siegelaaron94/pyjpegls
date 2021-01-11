@@ -1,0 +1,37 @@
+// Copyright (c) Team CharLS.
+// SPDX-License-Identifier: BSD-3-Clause
+
+//
+// cpp.hint: What is this thing?
+//
+// This file is used solely to aid Visual Studio Intellisense while editing.
+// It is not used as part of any build. See Microsoft docs for more info about this file.
+//
+
+#define CHARLS_API_IMPORT_EXPORT
+#define CHARLS_API_CALLING_CONVENTION
+#define CHARLS_NO_DISCARD [[nodiscard]]
+#define CHARLS_DEPRECATED [[deprecated]]
+#define CHARLS_FINAL final
+#define CHARLS_NOEXCEPT noexcept
+#define CHARLS_NO_INLINE
+#define FORCE_INLINE
+#define MSVC_WARNING_SUPPRESS(x)
+#define MSVC_WARNING_UNSUPPRESS()
+#define MSVC_WARNING_SUPPRESS_NEXT_LINE(x)
+#define MSVC_CONST
+#define IN_
+#define IN_OPT_
+#define IN_Z_
+#define IN_READS_BYTES_(size)
+#define OUT_
+#define OUT_OPT_
+#define OUT_WRITES_BYTES_(size)
+#define OUT_WRITES_Z_(size_in_bytes)
+#define RETURN_TYPE_SUCCESS_(expr)
+#define CHARLS_ATTRIBUTE(a)
+#define DISABLE_DEPRECATED_WARNING
+#define RESTORE_DEPRECATED_WARNING
+#define CHARLS_C_VOID
+#define CHARLS_CHECK_RETURN
+#define CHARLS_RET_MAY_BE_NULL
