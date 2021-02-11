@@ -32,6 +32,7 @@ setup(
 				('NPY_NO_DEPRECATED_API', 'NPY_1_7_API_VERSION')
 			]
 		),
-		build_dir='build'
+		build_dir='build',
+		language_level = "3"
 	)
 )

@@ -1,6 +1,5 @@
 cimport numpy as np
 from libc.stdint cimport *
-from setuptools import extern
 import numpy as np
 import math
 
