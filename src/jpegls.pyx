@@ -99,6 +99,8 @@ def save(tn, f, near_lossless=0):
 
 		error = charls_jpegls_encoder_get_estimated_destination_size(encoder, &encoded_buffer_size);
 		check_charls_failure(error)
+		
+		encoded_buffer_size = 3 * encoded_buffer_size / 2
 
 		encoded_buffer = np.empty(encoded_buffer_size, dtype=np.uint8)
 
