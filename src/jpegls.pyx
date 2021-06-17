@@ -75,8 +75,8 @@ def save(tn, f, near_lossless=0):
 			raise MemoryError()
 
 		frame_info.component_count = tn.shape[0]
-		frame_info.width = tn.shape[1]
-		frame_info.height = tn.shape[2]
+		frame_info.height = tn.shape[1]
+		frame_info.width = tn.shape[2]
 		if tn.dtype == np.uint16:
 			frame_info.bits_per_sample = 16
 			sample_bytes = 2
@@ -100,7 +100,8 @@ def save(tn, f, near_lossless=0):
 		error = charls_jpegls_encoder_get_estimated_destination_size(encoder, &encoded_buffer_size);
 		check_charls_failure(error)
 		
-		encoded_buffer_size = 3 * encoded_buffer_size / 2
+
+		encoded_buffer_size = 3 * encoded_buffer_size // 2
 
 		encoded_buffer = np.empty(encoded_buffer_size, dtype=np.uint8)
 
@@ -152,7 +153,7 @@ def load(f):
 		error = charls_jpegls_decoder_get_destination_size(decoder, 0, &destination_size)
 		check_charls_failure(error)
 
-		shape = (frame_info.component_count, frame_info.width, frame_info.height)
+		shape = (frame_info.component_count, frame_info.height, frame_info.width)
 		if frame_info.bits_per_sample == 8:
 			tn = np.empty(shape, dtype=np.uint8)
 			sample_bytes = 1
